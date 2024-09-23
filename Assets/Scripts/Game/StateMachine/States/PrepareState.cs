@@ -1,7 +1,5 @@
 ﻿using Game.Data;
 using Game.Player;
-using UnityEngine;
-using Zenject;
 
 namespace Game.StateMachine.States
 {
@@ -9,6 +7,13 @@ namespace Game.StateMachine.States
     {
         private PlayerViewChanger _playerViewChanger;
         private GameData _gameData;
+
+        public PrepareState(PlayerViewChanger playerViewChanger, GameData gameData)
+        {
+            _playerViewChanger = playerViewChanger;
+            _gameData = gameData;
+        }
+
         public void Enter()
         {
             _gameData.ChangePlayerState(PlayerStates.Poor);
@@ -20,10 +25,5 @@ namespace Game.StateMachine.States
            
         }
 
-        [Inject] private void Construct(PlayerViewChanger playerViewChanger, GameData gameData)
-        {
-            _playerViewChanger = playerViewChanger;
-            _gameData = gameData;
-        }
     }
 }
