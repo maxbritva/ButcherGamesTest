@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\user\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_ButcherGamesTest.-2142268325.00" t="ExcludeRecursive" />
+    <e p="D:\UNITY\PROJECTS\ButcherGamesTest" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="MobileDepthWater" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="WaterOpaque" t="Include">
+              <e p="Depth" t="Include">
+                <e p="DiffuseColorDepthWater.shader" t="Include" />
+                <e p="DiffuseDepthWater.shader" t="Include" />
+              </e>
+              <e p="DiffuseWaterOpaque.shader" t="Include" />
+              <e p="Height" t="Include">
+                <e p="DiffuseColorHeightWater.shader" t="Include" />
+                <e p="DiffuseHeightWater.shader" t="Include" />
+              </e>
+            </e>
+            <e p="WaterTwoSide" t="Include">
+              <e p="Depth" t="Include">
+                <e p="DiffuseColorDepthWaterTwoSide.shader" t="Include" />
+                <e p="DiffuseDepthWaterTwoSide.shader" t="Include" />
+              </e>
+              <e p="Height" t="Include">
+                <e p="DiffuseColorHeightWaterTwoSide.shader" t="Include" />
+                <e p="DiffuseHeightWaterTwoSide.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="DI" t="Include">
+            <e p="GameInstaller.cs" t="Include" />
+          </e>
+          <e p="Game" t="Include">
+            <e p="Data" t="Include">
+              <e p="GameData.cs" t="Include" />
+              <e p="PlayerStates.cs" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="PlayerViewChanger.cs" t="Include" />
+            </e>
+            <e p="StateMachine" t="Include">
+              <e p="GameStateMachine.cs" t="Include" />
+              <e p="IState.cs" t="Include" />
+              <e p="IStateSwitcher.cs" t="Include" />
+              <e p="States" t="Include">
+                <e p="GameState.cs" t="Include" />
+                <e p="PrepareState.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Visual" t="Include">
+          <e p="Shader" t="Include">
+            <e p="Hidden_BlitCopyHDRTonemap.shader" t="Include" />
+            <e p="Mobile_Diffuse + Color.shader" t="Include" />
+            <e p="Mobile_Diffuse + Emission +  Specular.shader" t="Include" />
+            <e p="Mobile_Diffuse + Emission.shader" t="Include" />
+            <e p="Toony Colors Pro 2_User_SliderRamp.shader" t="Include" />
+            <e p="Voodoo_LaunchOps_SliderRampSpecRimNormal.shader" t="Include" />
+            <e p="Voodoo_LaunchOps_SliderRampSpecularNormal.shader" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="ButcherGamesTest.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
