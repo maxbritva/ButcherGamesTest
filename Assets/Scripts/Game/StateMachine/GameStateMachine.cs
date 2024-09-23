@@ -11,16 +11,18 @@ namespace Game.StateMachine
         private List<IState> _states;
         private IState _currentState;
         private GameData _gameData;
+        private PlayerMove _playerMove;
         private PlayerViewChanger _playerViewChanger;
 
-        public GameStateMachine(GameData gameData, PlayerViewChanger playerViewChanger)
+        public GameStateMachine(GameData gameData, PlayerViewChanger playerViewChanger, PlayerMove playerMove)
         {
             _gameData = gameData;
+            _playerMove = playerMove;
             _playerViewChanger = playerViewChanger;
             _states = new List<IState>()
             {
-                new PrepareState(_playerViewChanger, _gameData),
-                new GameState()
+                new PrepareState(_playerViewChanger, _gameData, this),
+                new GameState(_playerViewChanger.gameObject, this, _playerMove)
             };
             _currentState = _states[0];
             _currentState.Enter();

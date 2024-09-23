@@ -13,12 +13,15 @@ namespace DI
     {
         [SerializeField] private PlayerViewChanger _playerViewChanger;
         [SerializeField] private WaypointsConfig _waypointsConfig;
+        [SerializeField] private SwipeController _swipeController;
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterEntryPoint<GameEntryPoint>();
             builder.Register<GameData>(Lifetime.Singleton);
+            builder.Register<PlayerMove>(Lifetime.Singleton);
             builder.RegisterInstance(_waypointsConfig);
             builder.RegisterInstance(_playerViewChanger);
+            builder.RegisterInstance(_swipeController);
             builder.Register<GameStateMachine>(Lifetime.Singleton);
         }
     }
