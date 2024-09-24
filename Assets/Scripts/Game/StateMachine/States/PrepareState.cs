@@ -5,13 +5,13 @@ namespace Game.StateMachine.States
 {
     public class PrepareState : IState
     {
-        private PlayerViewChanger _playerViewChanger;
+        private PlayerAnimatorController _playerAnimatorController;
         private IStateSwitcher _stateSwitcher;
         private GameData _gameData;
 
-        public PrepareState(PlayerViewChanger playerViewChanger, GameData gameData, IStateSwitcher stateSwitcher)
+        public PrepareState(PlayerAnimatorController playerAnimatorController, GameData gameData, IStateSwitcher stateSwitcher)
         {
-            _playerViewChanger = playerViewChanger;
+            _playerAnimatorController = playerAnimatorController;
             _gameData = gameData;
             _stateSwitcher = stateSwitcher;
         }
@@ -19,7 +19,8 @@ namespace Game.StateMachine.States
         public void Enter()
         {
             _gameData.ChangePlayerState(PlayerStates.Poor);
-            _playerViewChanger.SetPlayerView(_gameData.CurrentPlayerState);
+            _playerAnimatorController.SetPlayerState(_gameData.CurrentPlayerState);
+            _playerAnimatorController.SetIdleState();
             _stateSwitcher.SwitchState<GameState>();
         }
 

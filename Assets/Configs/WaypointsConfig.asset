@@ -15,13 +15,9 @@ MonoBehaviour:
   WayPoints:
   - position: {x: 0, y: 0.088, z: 12.5}
     rotation: {x: 0, y: 0, z: 0}
-    direction: 0
   - position: {x: 15.09, y: 0.088, z: 12.5}
     rotation: {x: 0, y: 90, z: 0}
-    direction: 1
   - position: {x: 15.09, y: 0.088, z: 37.4}
     rotation: {x: 0, y: 0, z: 0}
-    direction: 0
   - position: {x: 50.16, y: 0.088, z: 37.4}
     rotation: {x: 0, y: 90, z: 0}
-    direction: 2

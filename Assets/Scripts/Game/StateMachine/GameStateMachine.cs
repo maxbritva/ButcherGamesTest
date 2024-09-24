@@ -12,17 +12,17 @@ namespace Game.StateMachine
         private IState _currentState;
         private GameData _gameData;
         private PlayerMove _playerMove;
-        private PlayerViewChanger _playerViewChanger;
+        private PlayerAnimatorController _playerAnimatorController;
 
-        public GameStateMachine(GameData gameData, PlayerViewChanger playerViewChanger, PlayerMove playerMove)
+        public GameStateMachine(GameData gameData, PlayerAnimatorController playerAnimatorController, PlayerMove playerMove)
         {
             _gameData = gameData;
             _playerMove = playerMove;
-            _playerViewChanger = playerViewChanger;
+            _playerAnimatorController = playerAnimatorController;
             _states = new List<IState>()
             {
-                new PrepareState(_playerViewChanger, _gameData, this),
-                new GameState(_playerViewChanger.gameObject, this, _playerMove)
+                new PrepareState(_playerAnimatorController, _gameData, this),
+                new GameState(_playerAnimatorController.gameObject, this, _playerMove, _playerAnimatorController, gameData)
             };
             _currentState = _states[0];
             _currentState.Enter();
